@@ -37,3 +37,5 @@ skin/frontend/*
 skin/frontend/rwd/*
 !skin/frontend/rwd/sm
 skin/frontend/rwd/sm/scss/.sass-cache
+
+!dev
