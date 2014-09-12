@@ -1,0 +1,97 @@
+<?php if (Mage::getStoreConfig('sm_slider/general/enable')): ?>
+	<?php /*Zend_Debug::dump($this->getImages());die();*/ ?>
+	<?php if ($this->getImages() !== false): ?>
+	<div class="sm-slider">
+		<!-- <div class="swiper-scrollbar"></div> -->
+		<a class="arrow-left" href="#"></a> 
+	    <a class="arrow-right" href="#"></a>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<?php foreach ($this->getImages() as $image): ?>
+				<div class="swiper-slide"> 
+					<img src="<?php echo Mage::getUrl('media').$image->getPath() ?>" class="slide-image" alt="" />
+					<?php if ($this->getSliderConfig('showtext')): ?>
+					<div class="text-wrapper">
+						<p class="text"><?php echo $image->getText(); ?></p>
+					</div>	
+					<?php endif; ?>
+				</div>
+				<?php endforeach ?>		
+			</div>
+		</div>
+	 	<!-- <div class="pagination"></div> -->
+	 </div>
+	<?php endif ?>
+<?php else: ?>
+	<div class="slideshow-container">
+		<ul class="slideshow">
+			<li><a href="<?php echo Mage::getStoreConfig('web/secure/base_url') ?>accessories/eyewear.html"><img src="<?php echo Mage::getUrl('media') ?>/wysiwyg/slide-1.jpg" alt="An eye for detail - Click to Shop Eye Wear" /></a></li>
+			<li><a href="<?php echo Mage::getStoreConfig('web/secure/base_url') ?>women.html"><img src="<?php echo Mage::getUrl('media') ?>/wysiwyg/slide-2.jpg" alt="Style solutions - covet-worthy styles in travel-friendly fabrics - Click to Shop Woman" /></a></li>
+			<li><a href="<?php echo Mage::getStoreConfig('web/secure/base_url') ?>men.html"><img src="<?php echo Mage::getUrl('media') ?>/wysiwyg/slide-3.jpg" alt="Wing man - hit the runway in stylish separates and casuals - Click to Shop Man" /></a></li>
+	        </ul>
+	<div class="slideshow-pager">&nbsp;</div>
+	<span class="slideshow-prev">&nbsp;</span> <span class="slideshow-next">&nbsp;</span></div>
+<?php endif; ?>
+<style>
+	.sm-slider {
+		position: relative;
+		margin-bottom: 10px;
+	}
+	.sm-slider .arrow-left {
+	  background: url(skin/frontend/rwd/sm/img/arrows.png) no-repeat left top;
+	  position: absolute;
+	  left: 10px;
+	  top: 50%;
+	  margin-top: -15px;
+	  width: 17px;
+	  height: 30px;
+	  z-index: 50;
+	}
+	.sm-slider .arrow-right {
+	  background: url(skin/frontend/rwd/sm/img/arrows.png) no-repeat left bottom;
+	  position: absolute;
+	  right: 10px;
+	  top: 50%;
+	  margin-top: -15px;
+	  width: 17px;
+	  height: 30px;
+	  z-index: 50;
+	}
+	.swiper-container, .sm-slider {height: 600px;}
+	.slide-image {
+		width: 100%;
+		height: 600px;
+		overflow-y: hidden;
+		/*height: 100%;*/
+	}
+	.swiper-slide .text-wrapper {
+		position: relative;
+	}
+	.swiper-slide .text {
+		position: absolute;
+		bottom: -20px;
+		right: 0;
+		width: 100%;
+		padding: 15px;
+		text-align: right;
+		background-color: rgba(99,99,99,0.5);
+		color: #ddd;
+	}
+</style>
+
+<script>
+$j(function(){
+  var mySwiper = new Swiper('.swiper-container',{
+  	mode: '<?php echo $this->getSliderConfig("mode") ?>',
+    loop: true,
+  });
+	$j('.arrow-left').on('click', function(e){
+	    e.preventDefault()
+	    mySwiper.swipePrev()
+	  })
+	$j('.arrow-right').on('click', function(e){
+		e.preventDefault()
+		mySwiper.swipeNext()
+	})
+})
+</script>
