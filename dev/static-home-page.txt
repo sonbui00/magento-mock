@@ -1,0 +1,1 @@
+{{block type="sm_slider/slider" template="sm/slider/slider.phtml"}}

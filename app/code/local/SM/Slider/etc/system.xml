@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config>
     <sections>
-        <sm_slider translate="label" module="sm_slider">
+        <sm_pzoom translate="label" module="sm_pzoom">
             <tab>sm_base</tab>
-            <label>Slider</label>
-            <sort_order>20</sort_order>
+            <label>Product Zoom</label>
+            <sort_order>70</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
@@ -16,6 +16,7 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
 
                     <fields>
                         <enable translate="label">
@@ -27,36 +28,66 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enable>
-                        <showtext translate="label">
-                            <label>Show text</label>
-                            <frontend_type>select</frontend_type>
-                            <sort_order>2</sort_order>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </showtext>
-                        <homeslide translate="label">
-                            <label>Home slider</label>
-                            <frontend_type>select</frontend_type>
-                            <sort_order>3</sort_order>
-                            <source_model>sm_slider/resource_slider_collection</source_model>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </homeslide>
-                        <mode translate="label">
-                            <label>Default mode</label>
-                            <frontend_type>select</frontend_type>
-                            <sort_order>4</sort_order>
-                            <source_model>sm_slider/source_sliderconfig</source_model>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </mode>
                     </fields>
                 </general>
+                <main_image translate="label">
+                    <label>Main image</label>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+
+                    <fields>
+                        <size translate="label">
+                            <label>Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </size>
+                    </fields>
+                </main_image>
+                <box_zoom translate="label">
+                    <label>Box zoom</label>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+
+                    <fields>
+                        <size translate="label">
+                            <label>Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </size>
+                    </fields>
+                </box_zoom>
+                <thumbnail translate="label">
+                    <label>Thumnail</label>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+
+                    <fields>
+                        <size translate="label">
+                            <label>Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </size>
+                    </fields>
+                </thumbnail>
             </groups>
-        </sm_slider>
+        </sm_pzoom>
     </sections>
 </config>
