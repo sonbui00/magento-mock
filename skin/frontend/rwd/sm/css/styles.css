@@ -1744,7 +1744,7 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1260px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -1947,7 +1947,7 @@ a.button:hover {
  */
 @media only screen and (min-width: 771px) {
   .top-container {
-    max-width: 1260px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -1963,7 +1963,7 @@ a.button:hover {
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
   line-height: 11px;
@@ -3669,13 +3669,29 @@ body {
  * ============================================ */
 @media only screen and (min-width: 771px) {
   .page-header {
-    max-width: 1260px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 30px;
   }
 
   .page-header-container {
     position: relative;
+  }
+
+  #header {
+    float: left;
+    width: 100%;
+    z-index: 100;
+    position: relative;
+    background-color: rgba(211, 211, 211, 0.8);
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  #nav {
+    float: left;
   }
 }
 .header-language-container,
@@ -3692,7 +3708,7 @@ body {
   text-transform: uppercase;
 }
 .header-language-background .header-language-container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3911,6 +3927,45 @@ a.skip-link {
     text-decoration: none;
   }
 }
+.header-topbar {
+  height: 40px;
+  line-height: 40px;
+  background-color: #aaa;
+}
+.header-topbar .header-topbar-container {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-topbar .header-topbar-container:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.header-topbar .header-topbar-right {
+  float: right;
+}
+.header-topbar .form-language .icon {
+  background-image: url(../images/flag-default.jpg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 20px;
+}
+.header-topbar .form-language .icon.french {
+  background-image: url(../images/flag-french.jpg);
+}
+.header-topbar .form-language .icon.german {
+  background-image: url(../images/flag-german.jpg);
+}
+
+.inline-block-item {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
 /**
  * Magento
  *
@@ -3978,7 +4033,14 @@ a.skip-link {
   #header-nav {
     display: block;
     /* Force visibility */
-    border-bottom: 1px solid #EDEDED;
+  }
+
+  .header-nav {
+    background-color: #111111;
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
   }
 }
 /* ============================================ *
@@ -3987,7 +4049,6 @@ a.skip-link {
 @media only screen and (min-width: 771px) {
   .nav-primary {
     display: block;
-    margin-top: 15px;
   }
 }
 /* ============================================ *
@@ -4201,11 +4262,8 @@ a.skip-link {
 @media only screen and (min-width: 771px) {
   #header-search {
     display: block;
-    position: absolute;
-    top: 55px;
-    right: 0;
-    width: 25%;
-    height: 50px;
+    float: right;
+    width: 112px;
     padding: 0;
   }
 }
@@ -4222,10 +4280,11 @@ a.skip-link {
 }
 
 #search {
-  width: 100%;
-  height: 40px;
+  width: 112px;
   padding-right: 40px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+  background: none;
+  border: none;
 }
 
 #search_mini_form .search-button {
@@ -4246,7 +4305,7 @@ a.skip-link {
   left: 50%;
   width: 30px;
   height: 30px;
-  margin-top: -15px;
+  margin-top: -20px;
   margin-left: -15px;
   background-position: 4px -146px;
 }
@@ -4390,8 +4449,11 @@ a.skip-link {
     position: absolute;
     top: 0;
     right: 0;
+    bottom: 0;
+    margin: auto;
     width: auto;
     padding: 0 10px;
+    background: none;
   }
 
   #header-cart.skip-active {
@@ -4595,7 +4657,8 @@ a.skip-link {
   }
 }
 .footer .block-title {
-  border-bottom: 0;
+  border-top: 0;
+  border-bottom: 1px solid #CCC;
   padding: 3px 0;
 }
 .footer .block-title strong {
@@ -4774,6 +4837,25 @@ a.skip-link {
     float: left;
     width: 100%;
   }
+}
+.footer .container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.footer .container .span3 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
 }
 
 /**

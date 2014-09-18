@@ -8,3 +8,8 @@ relative_assets = true
 sourcemap = true
 output_style = :expanded
 environment = :production
+
+require 'susy'
+
+
+

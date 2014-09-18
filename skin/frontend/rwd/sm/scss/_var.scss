@@ -75,7 +75,7 @@ $element-spacing: 7px;
 
 // Dimensions
 
-$max-content-width: 1200px;
+$max-content-width: 1180px;
 $max-container-width: $trim + $max-content-width + $trim;
 $max-std-formatted-width: 50em;
 
@@ -219,3 +219,10 @@ $f-size-xxs: 11px;
 
 $b-line-height: 1.5;
 $b-margin-bottom: 1.5em;
+
+// Susy
+$susy: (
+  columns: 12,
+  gutters: .25,
+  gutter-position: inside,
+)

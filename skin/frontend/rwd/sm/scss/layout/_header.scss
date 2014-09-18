@@ -39,6 +39,20 @@
         position: relative;
     }
 
+    #header {
+        float: left;
+        width: 100%;
+        z-index: 100;
+        position: relative;
+        background-color: rgba(211,211,211,0.8);
+    }
+    .clearfix {
+        clear: both;
+    }
+
+    #nav {
+        float: left;
+    }
 }
 
 .header-language-container,

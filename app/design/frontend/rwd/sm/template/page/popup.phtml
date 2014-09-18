@@ -1,3 +1,4 @@
+<?php
 /**
  * Magento
  *
@@ -18,43 +19,34 @@
  * needs please refer to http://www.magentocommerce.com for more information.
  *
  * @category    design
- * @package     default_default
+ * @package     rwd_default
  * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
 
-// ==============================================
-// SASS / Compass Framework
-// ==============================================
+<!DOCTYPE html>
 
-// ----------------------------------------------
-// Compass
+<!--[if lt IE 7 ]> <html lang="en" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" id="top" class="no-js"> <!--<![endif]-->
 
-@import "compass";
-@import "compass/css3";
-@import "susy";
-
-// ----------------------------------------------
-// Vars
-
-@import "var";
-
-// ----------------------------------------------
-// Functions
-
-@import "function/black";
-@import "function/white";
-
-// ----------------------------------------------
-// Mixins
-
-@import "mixin/breakpoint";
-@import "mixin/clearfix";
-@import "mixin/image-replacement";
-@import "mixin/menu";
-@import "mixin/not-selectable";
-@import "mixin/if-resolution";
-@import "mixin/toggle-content";
-@import "mixin/triangle";
-@import "mixin/typography";
-@import "mixin/loading-overlay";
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body class="page-popup<?php echo $this->getBodyClass()?$this->getBodyClass() : ''?>">
+<div>
+    <?php echo $this->getChildHtml('after_body_start') ?>
+    <?php echo $this->getChildHtml('content') ?>
+    <?php echo $this->getChildHtml('before_body_end') ?>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
