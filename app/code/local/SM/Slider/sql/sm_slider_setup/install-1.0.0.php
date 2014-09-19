@@ -1,7 +1,7 @@
 <?php
 
 $installer = $this;
-
+$installer->startSetup();
 $installer->getConnection()
     ->dropTable($installer->getTable('sm_slider/sm_slider'));
 
@@ -85,8 +85,4 @@ $tableImage = $installer->getConnection()
 $installer->getConnection()->createTable($tableImage);
 
 
- ?>
-
-
-
- ?>
+$install->endSetup();

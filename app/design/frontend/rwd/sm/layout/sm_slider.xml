@@ -5,16 +5,9 @@
 			<action method="addCss">
 				<name>css/idangerous.swiper.css</name>
 			</action>
-			<action method="addCss">
-				<name>css/idangerous.swiper.scrollbar.css</name>
-			</action>
 			<action method="addItem">
 				<type>skin_js</type>
 				<name>js/idangerous.swiper.min.js</name>
-			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/idangerous.swiper.scrollbar-2.1.js</name>
 			</action>
 		</reference>
 	</default>

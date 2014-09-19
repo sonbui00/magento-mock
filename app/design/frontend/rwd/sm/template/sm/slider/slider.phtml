@@ -1,5 +1,4 @@
 <?php if (Mage::getStoreConfig('sm_slider/general/enable')): ?>
-	<?php /*Zend_Debug::dump($this->getImages());die();*/ ?>
 	<?php if ($this->getImages() !== false): ?>
 	<div class="sm-slider">
 		<div class="swiper-container">
@@ -39,7 +38,7 @@
 	.swiper-slide .text-wrapper {
 		position: relative;
 	}
-	.swiper-slide .text {
+	.sm-slider .swiper-slide .text {
 		position: absolute;
 		bottom: -20px;
 		right: 0;
